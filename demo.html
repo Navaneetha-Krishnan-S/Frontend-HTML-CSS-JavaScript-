@@ -1,0 +1,48 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onclick="console.log(textContent='krish')" >Hi</h1>
+</body>
+</html>-->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Addition of Two Numbers</h1>
+    <input type="number" placeholder="First Number" id="one">
+    <input type="number" placeholder="Second Number" id="two">
+    <button onclick="add()">Result</button>
+    <p id="result">Result</p>
+
+    <script>
+        function add(){
+            var a=Number(document.getElementById('one').value)
+            var b=Number(document.getElementById('two').value)
+            var c= document.getElementById('result')
+
+            if(a==0 || b==0){
+                alert("Enter Number")
+                return;
+            }
+            
+            var sum = a+b
+            c.textContent=sum
+        }
+    </script>
+</body>
+</html>
