@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuessTheNumber</title>
+</head>
+<body>
+    <h1>Guess the Number</h1>
+    <input type="number" placeholder="Enter number 1 to 10" id="guess">
+    <button onclick="game()">Enter</button>
+    <h5 id="message">You are Correct / Wrong</h5>
+    <p id="score">Score : 10</p>
 
+    <script>
+        var guessNumber = document.getElementById("guess")
+        var message = document.getElementById("message")
+        var ranNumber = Math.floor(Math.random()*10) + 1        //to generate random number
+        var score = document.getElementById("score")
+        var point = 10
+      
+
+        function game(){                        //creating function
+            
+            var verify = guessNumber.value
+            
+            if(verify==ranNumber){
+
+                document.getElementById("message").innerHTML="Correct"
+                alert("You Won! Your Score is : "+ point )
+            }
+
+            else
+            {
+            message.textContent="Wrong"
+            point = point -1
+            score.textContent="Score : "+ point
+            if (point<=0){                          
+            alert("You Lose! Refresh this page to Try Again...")
+            return score.textContent="Score : 0"
+        }
+        }
+       
+        }
+    </script>
+</body>
+</html>
