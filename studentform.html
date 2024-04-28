@@ -3,9 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student Form</title>
 </head>
 <body>
-    
+    <h1>Student Form</h1>
+    <table>
+        <tr>
+            <td>
+                Name:
+            </td>
+            <td>
+                <input type="text" placeholder="Name" id="name">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Age:
+            </td>
+            <td>
+                <input type="number" placeholder="Age" id="age">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Gender:
+            </td>
+            <td>
+                <input type="radio" name="gender" id="male" value="Male" for="male"> Male</input>
+                <input type="radio" name="gender" id="female" value="Female" for="female"> Female</input>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Course: 
+            </td>
+            <td>
+                <select name="" id="course">
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="MERN Stack">MERN Stack</option>
+                    <option value="MEAN Stack">MEAN Stack</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                E-mail:
+            </td>
+            <td>
+                <input type="text" placeholder="E-mail" id="mail">
+            </td>
+        </tr>
+        
+    </table>
+    <button onclick="update()"> Submit</button>
+    <ul id="ul">
+
+    </ul>
+
+
+    <script>
+
+        var user = document.getElementById("name")
+        var age = document.getElementById("age")
+        var course = document.getElementById("course")
+        var mail = document.getElementById("mail")
+        var ul = document.getElementById("ul")
+
+
+        function update(){
+            var gender = document.querySelector('input[name="gender"]:checked').value;
+
+
+            var data = document.createElement("li")
+            data.innerHTML= user.value+"  |  "+age.value+"  |  "+gender+"  |  "+course.value+"  |  "+mail.value+"  |  " +"<button onclick='del(event)'>Delete</button>"
+            ul.append(data)
+            user.value=""
+            age.value=""
+            course.value=""
+            mail.value=""
+
+        }
+        
+        function del(event){
+            event.target.parentElement.remove()
+        }
+
+    </script>
+
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+td {
+    padding: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+li button {
+    margin-left: 10px;
+    background-color: #f44336;
+}
+
+li button:hover {
+    background-color: #d32f2f;
+}
+
+
+</style>
 </body>
 </html>
