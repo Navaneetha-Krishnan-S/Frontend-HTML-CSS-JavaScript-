@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>krish</title>
+</head>
+<body>
+  <div id="div">
+    <input type="text" placeholder="Type here" id="input">
+    <br>
+    <button onclick="update()">Add</button>
+
+    <script>
+        var input = document.getElementById("input")
+        var div = document.getElementById("div")
+
+        function update(){
+            var new1 = document.createElement("h1")
+            new1.textContent=input.value
+            div.append(new1)
+
+        }
+
+    </script>
+
+
+<style>
+    body{
+        margin: 5cm;
+    }
+    #input{
+        margin-bottom: 1cm;
+        width: 7cm;
+        height: 1cm;
+        border-style: solid;
+        
+    }
+</style>
+
+  </div>
+</body>
+</html>
