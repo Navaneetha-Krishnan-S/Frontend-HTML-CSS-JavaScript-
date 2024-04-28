@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo list</title>
+</head>
+<body>
+    <h1>To Do List</h1>
+    <h3>Write Down your Tasks...</h3>
+    <input type="text" placeholder="Type here..." id="input">
+    <button onclick="update()">Add</button>
+    <ul id="ul"></ul>
+
+    <script>
+        var input = document.getElementById("input")
+        var ul = document.getElementById("ul")
+
+        function update(){
+
+            var task = document.createElement("li")
+            task.innerHTML=input.value+"<button onclick='del(event)'>Delete</button>"
+            ul.append(task)
+        }
+
+        function del(event){
+         event.target.parentElement.remove()
+        }
+    </script>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin-top: 3cm;
+        padding: 0;
+        text-align: center;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    h3 {
+        color: #666;
+    }
+
+    input[type="text"] {
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        background-color: #fff;
+        padding: 10px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    li button {
+        background-color: #f44336;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    li button:hover {
+        background-color: #e53935;
+    }
+</style>
+
+
+</body>
+</html>
