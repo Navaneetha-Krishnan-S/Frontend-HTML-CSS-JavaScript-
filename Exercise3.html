@@ -9,7 +9,7 @@
     <button  onclick="update(event)">Navaneetha</button>
     <button  onclick="update(event)">Krishnan</button>
     <button  onclick="update(event)">Navaneetha Krishnan</button>
-
+    <p id="para" onclick="delet(event)" style="margin-top: 5cm;">Click to Delete this line!</p>
 
 
     <script>
@@ -19,7 +19,11 @@
             result.textContent=event.target.textContent
             
         }
-    
+        
+        function delet(event){
+            para.textContent=event.target.remove()
+        }
+
     </script>
 </body>
 </html>
