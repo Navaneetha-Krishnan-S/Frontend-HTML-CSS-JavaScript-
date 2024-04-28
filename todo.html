@@ -19,6 +19,7 @@
             var task = document.createElement("li")
             task.innerHTML=input.value+"<button onclick='del(event)'>Delete</button>"
             ul.append(task)
+            input.value=""
         }
 
         function del(event){
