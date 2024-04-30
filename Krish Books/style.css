@@ -5,15 +5,18 @@
 }
 
 
-@media screen and (max-width:768px) {
-    .container {
-        width: 40% !important; 
-        
-    }
-}
 
-@media screen and (max-width:640px) {
+
+@media screen and (max-width:320px) {
     .container {
+        width: 90% !important; 
+      
+    }
+    .popup {
+        width: 90% !important; 
+      
+    }
+    .overlay {
         width: 90% !important; 
       
     }
