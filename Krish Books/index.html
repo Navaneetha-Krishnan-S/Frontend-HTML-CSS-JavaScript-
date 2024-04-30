@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krish</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Krish Books</h1>
+    </div>
+
+    <div class="main-container">
+        <div class="container">
+            <h2>Rich Dad Poor Dad</h2>
+            <h4> Robert Kiyosaki</h4>
+            <p>"Rich Dad Poor Dad" by Robert Kiyosaki is a personal finance classic detailing Kiyosaki's upbringing with contrasting financial mentors: his own dad ("Poor Dad") and the father of his best friend ("Rich Dad"). It emphasizes financial literacy, investment strategies, and the mindset shifts needed to achieve wealth.</p>
+            <button onclick="deleteBook(event)">Delete</button>
+        </div>
+        
+       
+    </div>
+
+    <div>
+        <button class="add-button">+</button>
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="popup"> 
+        <h2>Add Book</h2>
+        <form >
+            <input placeholder="Book Title" id="title-input">
+            <input placeholder="Author Title" id="author-title">
+            <textarea placeholder="Short Description" id="description"></textarea>
+            <button id="add-book">Add</button>
+            <button id="cancel-book">Cancel</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
