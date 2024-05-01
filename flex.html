@@ -161,7 +161,7 @@
     .container {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: center;
     }
     .container div {
       margin: 10px;
@@ -170,19 +170,23 @@
     }
     .container div p {
       width: 200px;
-      padding: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
     .container div h2 {
       padding: 10px;
     }
 
-    @media screen and (max-width:600px) {
+    @media screen and (max-width:375px) {
       .container {
+        
         text-align: center;
       }
       .container div p {
-        text-align: center;
-      }
+      margin-left: 50px;
+     
+    }
+      
     }
   </style>
 </html>
