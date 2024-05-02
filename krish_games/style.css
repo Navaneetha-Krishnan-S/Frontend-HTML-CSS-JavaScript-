@@ -99,6 +99,77 @@ body {
     background-color: green;
     color: black;
 }
+
+.service-one{
+ display: flex;
+ padding: 10px;
+  
+  justify-content: space-between;
+}
+
+.service-two{
+  margin-top: 10px;
+  
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.service-two div{
+  background-color: #f2f4f7;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+  
+}
+.service-two div h3{
+  
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
+}
+.new-arrival{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+.new-arrival div{
+  position: relative;
+  flex-basis: 22%;
+  padding-top:20px;
+  
+ 
+}
+
+  .new-arrival div button {
+    background-color: black;
+    opacity: .6;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    position: absolute;
+    top: 70%;
+    left: 15%;
+  }
+
+  .new-arrival div button:hover{
+    background-color: black;
+    color: white;
+    opacity: 1;
+    
+  }
+  
+
+
+
+
 /*Media Query*/
 @media screen and (max-width: 700px) {
   .menu-toggle {
@@ -117,4 +188,12 @@ body {
  .header-two{
   margin-bottom: 20px;
  }
+ .service-one {
+  flex-grow: 1;
+ }
+ .service-two{
+  flex-direction: column;
+ }
+
 }
+
