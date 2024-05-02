@@ -209,62 +209,7 @@ body {
  .service-two{
   flex-direction: column;
  }
- .new-arrival div {
-  position: relative;
-  flex-basis: 22%;
-  padding-top: 20px;
-  overflow: hidden; /* Ensures the overlay stays within the container */
-}
-
-.new-arrival div img {
-  width: 100%;
-  transition: transform 0.3s ease; /* Add transition effect */
-}
-
-.new-arrival div button {
-  background-color: black;
-  opacity: 0;
-  color: white;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 15px;
-  position: absolute;
-  bottom: -50px; /* Initially position button outside */
-  left: 0;
-  right: 0;
-  margin: auto; /* Center horizontally */
-  transition: bottom 0.3s ease, opacity 0.3s ease; /* Add transition effect */
-}
-
-.new-arrival div:hover img {
-  transform: scale(1.1); /* Zoom in on hover */
-}
-
-.new-arrival div:hover button {
-  opacity: 1; /* Show button on hover */
-  bottom: 10px; /* Move button up on hover */
-}
-
-.new-arrival div::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: 0;
-  transition: opacity 0.3s ease; /* Add transition effect */
-}
-
-.new-arrival div:hover::before {
-  opacity: 0.7; /* Show black overlay on hover */
-}
-
+ 
 
 }
 
