@@ -49,7 +49,7 @@ body {
 
   padding: 20px;
   color: white;
-  transition: 2s;
+  transition: 1s;
 }
 .cross-button {
   text-align: end;
@@ -108,7 +108,7 @@ body {
     display: none;
   }
   .header{
-    justify-content: center;
+    align-items: center;
     flex-direction: column-reverse;
     
 
