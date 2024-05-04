@@ -11,5 +11,13 @@ function toggleClose() {
     sideNavBar.style.left = "-70%"
 }
 
+var subscribe = document.getElementById("subscribe")
+subscribe.addEventListener("click",function(){
+    if(subscribe=="")
+        alert("Enter your mail id!")
+    else{
+        alert("Thank You for Subscribing our News Letter.")
+    }
+})
 
 
