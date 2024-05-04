@@ -1,3 +1,4 @@
+// navbar
 
 var sideNavBar = document.querySelector(".side-navbar")
 function toggle() {
@@ -9,3 +10,8 @@ var sideNavBar = document.querySelector(".side-navbar")
 function toggleClose() {
     sideNavBar.style.left = "-70%"
 }
+
+
+
+// search
+
