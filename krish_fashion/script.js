@@ -12,12 +12,14 @@ function toggleClose() {
 }
 
 var subscribe = document.getElementById("subscribe")
+var inputSubscribe = document.getElementById("inputSubscribe")
 subscribe.addEventListener("click",function(){
-    if(subscribe=="")
-        alert("Enter your mail id!")
+    if(inputSubscribe.value==""){
+        alert("Enter your mail id!")}
     else{
         alert("Thank You for Subscribing our News Letter.")
     }
+    inputSubscribe.value=""
 })
 
 
